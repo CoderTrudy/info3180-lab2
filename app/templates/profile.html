@@ -1,0 +1,46 @@
+
+<!-- <!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+<meta-charset ="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<title>My Profile</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+{% block css %} {% endblock%}
+<body>
+<container>
+<img src="{{ url_for('static', filename='images/Profile Photo.jpg') }}" class="image" />
+<h1>Rae-Ann Clarke</h1>
+<p>@Rae-Ann</p>
+<p>Kingston, Jamaica</p>
+<p>Joined February 21,2024</p>
+</container>
+</body>
+<footer><p>I am a smart and talented young woman who loves web design and development. Contact me if you would like to work with me on a project together</p></footer>
+</html>
+
+ --> 
+
+
+
+{% extends "base.html" %}
+{% block main %}
+    <div class="profile">
+        <img src="{{ url_for('static', filename='images/Profile Photo.jpg') }}" alt="Profile Picture">
+        <h2>{{ user_info.full_name }}</h2>
+        <p>Username: {{ user_info.username }}</p>
+        <p>Location: {{ user_info.location }}</p>
+        <p>Joined: {{ formatted_date_joined }}</p>
+        <p>Bio: {{ user_info.bio }}</p>
+        
+        <div class="horizontal-stats">
+            <p>Posts: {{ user_info.num_posts }}</p>
+            <p>Following: {{ user_info.num_following }}</p>
+            <p>Followers: {{ user_info.num_followers }}</p>
+        </div>
+        
+        <button>Follow</button>
+    </div>
+{% endblock %} 
