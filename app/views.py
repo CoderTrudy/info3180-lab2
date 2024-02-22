@@ -25,15 +25,15 @@ def format_date_joined(date_joined):
 def profile():
     """Render the website's profile page."""
     user_info = {
-        'full_name': 'John Doe',
-        'username': 'johndoe123',
-        'location': 'New York',
-        'date_joined': datetime.date(2020, 5, 15),
-        'bio': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        'num_posts': 20,
+        'full_name': 'Rae-Ann ',
+        'username': '@Rae-Ann',
+        'location': 'St.Andrew,Jamaica',
+        'date_joined': datetime.date(2024, 2, 21),
+        'bio': 'I am a smart and talented young woman who loves web design and development. Contact me if you would like to work with me on a project',
+        'num_posts': 7,
         'num_followers': 100,
-        'num_following': 50,
-        'profile_pic': 'Profile Photo.jpg'  # Assuming this image is saved in app/static folder
+        'num_following': 250,
+        'profile_pic': 'Profile Photo.jpg'
     }
     formatted_date_joined = format_date_joined(user_info['date_joined'])
     return render_template('profile.html', user_info=user_info, formatted_date_joined=formatted_date_joined)

@@ -9,7 +9,7 @@ img{
 }
 .horizontal-stats {
     display: flex;
-    justify-content: center; /* Horizontally center items */
+    justify-content: center; 
     align-items: center;
 }
 
@@ -19,14 +19,45 @@ img{
 }
 .stat {
     text-align: center;
-    margin: 0 20px; /* Adjust spacing between stats */
+    margin: 0 20px;
 }
 
 .number {
-    font-size: 24px; /* Adjust font size of the numbers */
+    font-size: 20px; 
     font-weight: bold;
 }
 
 .label {
-    margin-top: 5px; /* Adjust space between number and label */
+    margin-top: 5px; 
+}
+button.follow-btn {
+    background-color: green; 
+    color: white; 
+    border: none; 
+    padding: 10px 40px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    border-radius: 15px;
+    width: auto;
+}
+
+button.follow-btn:hover {
+    background-color: darkgreen; 
+}
+.divider {
+    border: 1px solid #ccc; 
+    margin: 20px 0; 
+    width: 100%; 
+}
+.user-info-section {
+    background-color: greenyellow; 
+    padding: 15px; 
+}
+.card {
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+    margin: 20px auto; 
+    width: 80%; 
+    max-width: 600px; 
 }

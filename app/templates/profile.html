@@ -27,20 +27,35 @@
 
 {% extends "base.html" %}
 {% block main %}
+<div class="card">
     <div class="profile">
+        <div class="user-info-section">
         <img src="{{ url_for('static', filename='images/Profile Photo.jpg') }}" alt="Profile Picture">
         <h2>{{ user_info.full_name }}</h2>
-        <p>Username: {{ user_info.username }}</p>
-        <p>Location: {{ user_info.location }}</p>
-        <p>Joined: {{ formatted_date_joined }}</p>
-        <p>Bio: {{ user_info.bio }}</p>
-        
-        <div class="horizontal-stats">
-            <p>Posts: {{ user_info.num_posts }}</p>
-            <p>Following: {{ user_info.num_following }}</p>
-            <p>Followers: {{ user_info.num_followers }}</p>
+        <p>{{ user_info.username }}</p>
+        <p>{{ user_info.location }}</p>
+        <p>Joined {{ formatted_date_joined }}</p>
         </div>
+        <hr class="divider">
+        <p>{{ user_info.bio }}</p>
+
+        <div class="horizontal-stats">
+            <div class="stat">
+                <p class="number">{{ user_info.num_posts }}</p>
+                <p class="label">Posts</p>
+            </div>
+            <div class="stat">
+                <p class="number">{{ user_info.num_following }}</p>
+                <p class="label">Following</p>
+            </div>
+            <div class="stat">
+                <p class="number">{{ user_info.num_followers }}</p>
+                <p class="label">Followers</p>
+            </div>
+        </div>
+
+        <button class="follow-btn">Follow</button>
         
-        <button>Follow</button>
+    </div>
     </div>
 {% endblock %} 
